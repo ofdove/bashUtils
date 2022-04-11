@@ -1,0 +1,22 @@
+#!/bin/bash
+##################################################
+#Author:  Qian Hang
+#Date:  2022年 04月 11日 星期一 21:14:13 CST
+#Description:  Check which command to run
+##################################################
+echo 
+echo Please choose one of the option below
+echo
+echo 'a = Display date and time'
+echo 'b = List files and directories'
+echo 'c = List users logged in'
+echo 'd = Check system uptime'
+echo
+read choice
+case $choice in
+a) date;;
+b) ls;;
+c) who;;
+d) uptime;;
+*) echo invalid choice - Bye.
+esac
