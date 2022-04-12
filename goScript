@@ -3,7 +3,7 @@ read -r -p "Please enter the name of the script: " script
 read -r -p "Input your full name: " fname
 read -r -p "The description of the script: " des
 
-echo "#!/bin/bashUtils" > /home/ofdove/code/bashUtils/${script}
+echo "#!/bin/bash" > /home/ofdove/code/bashUtils/${script}
 echo 
 echo "##################################################" >> /home/ofdove/code/bashUtils/${script}
 echo 
