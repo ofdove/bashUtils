@@ -1,0 +1,33 @@
+#!/bin/bash
+##################################################
+#Author:  Qian Hang
+#Date:  2022-04-12T20:03:37 CST
+#Description:  Adding servers you own as a reminder
+##################################################
+
+echo Please enter hostname: 
+read host 
+echo 
+grep -q $host /home/ofdove/code/bashUtils/database
+if [ $? -eq 0 ] 
+then 
+  echo ERROR -- Hostname $host already exist
+  echo
+  exit 0
+fi
+echo Please enter IP address
+read IP 
+echo 
+grep -q $IP /home/ofdove/code/bashUtils/database
+if [ $? -eq 0 ]
+then ERROR -- IP $IP already exist
+  echo 
+  exit 0
+fi
+echo Please enter description 
+read des
+echo
+
+echo $host $IP $des >> /home/ofdove/code/bashUtils/database
+echo The provided record had been added 
+echo

@@ -1,5 +1,4 @@
 #!/bin/bash
-
 read -r -p "Please enter the name of the script: " script
 read -r -p "Input your full name: " fname
 read -r -p "The description of the script: " des
@@ -17,4 +16,8 @@ echo
 echo "##################################################" >> /home/ofdove/code/bashUtils/${script}
 echo 
 chmod a+x /home/ofdove/code/bashUtils/${script}
+<<<<<<< HEAD
 helix /home/ofdove/code/bashUtils/${script}
+=======
+helix /home/ofdove/code/bashUtils/${script}
+>>>>>>> fe6e58c2fb611c2338b5a4a9f5f6ddb8eef47920
