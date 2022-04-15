@@ -1,0 +1,15 @@
+#!/bin/bash
+##################################################
+#Author:  Qian Hang
+#Date:  2022年 04月 14日 星期四 20:26:02 CST
+#Description:  To check if the string is a palindrome.
+##################################################
+
+read c
+cv=`echo $c | rev`
+if [ $c = $cv ] 
+then 
+echo yes
+else 
+echo no
+fi        
