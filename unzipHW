@@ -1,0 +1,10 @@
+#!/bin/bash
+##################################################
+#Author:  Qian Hang
+#Date:  2022年 04月 16日 星期六 17:10:23 CST
+#Description:  Unzip the HW.zip file to specific path
+##################################################
+
+unzip ~/Downloads/hw??.zip
+rm ~/Downloads/hw??.zip
+mv ~/Downloads/hw* ~/code/cs61A/

@@ -1,0 +1,9 @@
+#!/bin/bash
+##################################################
+#Author:  Qian Hang
+#Date:  2022年 04月 17日 星期日 15:31:18 CST
+#Description:  Unzip the lab??.zip file to specific path
+##################################################
+
+unzip ~/Downloads/lab??.zip -d /home/ofdove/code/cs61A/
+rm ~/Downloads/lab??.zip
