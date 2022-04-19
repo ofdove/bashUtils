@@ -5,6 +5,5 @@
 #Description:  Unzip the HW.zip file to specific path
 ##################################################
 
-unzip ~/Downloads/hw??.zip
+unzip ~/Downloads/hw??.zip -d /home/ofdove/Code/cs61A/
 rm ~/Downloads/hw??.zip
-mv ~/Downloads/hw* ~/code/cs61A/

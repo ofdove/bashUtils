@@ -3,17 +3,17 @@ read -r -p "Please enter the name of the script: " script
 read -r -p "Input your full name: " fname
 read -r -p "The description of the script: " des
 
-echo "#!/bin/bash" > /home/ofdove/code/bashUtils/${script}
+echo "#!/bin/bash" > /home/ofdove/Code/bashUtils/${script}
 echo 
-echo "##################################################" >> /home/ofdove/code/bashUtils/${script}
+echo "##################################################" >> /home/ofdove/Code/bashUtils/${script}
 echo 
-echo "#Author: " $fname >> /home/ofdove/code/bashUtils/${script}
+echo "#Author: " $fname >> /home/ofdove/Code/bashUtils/${script}
 echo 
-echo "#Date: " $(date) >> /home/ofdove/code/bashUtils/${script}
+echo "#Date: " $(date) >> /home/ofdove/Code/bashUtils/${script}
 echo 
-echo "#Description: " $des >> /home/ofdove/code/bashUtils/${script}
+echo "#Description: " $des >> /home/ofdove/Code/bashUtils/${script}
 echo
-echo "##################################################" >> /home/ofdove/code/bashUtils/${script}
+echo "##################################################" >> /home/ofdove/Code/bashUtils/${script}
 echo 
-chmod a+x /home/ofdove/code/bashUtils/${script}
-helix /home/ofdove/code/bashUtils/${script}
+chmod a+x /home/ofdove/Code/bashUtils/${script}
+helix /home/ofdove/Code/bashUtils/${script}

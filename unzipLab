@@ -5,5 +5,5 @@
 #Description:  Unzip the lab??.zip file to specific path
 ##################################################
 
-unzip ~/Downloads/lab??.zip -d /home/ofdove/code/cs61A/
+unzip ~/Downloads/lab??.zip -d /home/ofdove/Code/cs61A/
 rm ~/Downloads/lab??.zip
