@@ -1,0 +1,8 @@
+#!/bin/bash
+##################################################
+#Author:  Qian Hang
+#Date:  2022年 04月 27日 星期三 17:31:43 CST
+#Description:  Total RAM use of proccesses
+##################################################
+
+ps aux | grep -v 'RSS TTY' | awk '{a+=$6}END{print a}'

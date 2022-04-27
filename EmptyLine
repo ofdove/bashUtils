@@ -1,0 +1,9 @@
+#!/bin/bash
+##################################################
+#Author:  Qian Hang
+#Date:  2022年 04月 27日 星期三 16:28:15 CST
+#Description:  Print the line number of empty lines
+##################################################
+
+awk '/^$/{print NR}' nowcoder.txt
+

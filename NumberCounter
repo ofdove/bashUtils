@@ -1,0 +1,9 @@
+#!/bin/bash
+##################################################
+#Author:  Qian Hang
+#Date:  2022年 04月 27日 星期三 19:31:28 CST
+#Description:  Count the numbers which appear in every line
+##################################################
+echo "Which file?"
+read file
+awk -F "[1,2,3,4,5]" 'BEGIN{sum=0}{print "line"NR" number:"(NF-1);sum+=(NF-1)}END{print "sum is "sum}' $file

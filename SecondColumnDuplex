@@ -1,0 +1,11 @@
+#!/bin/bash
+##################################################
+#Author:  Qian Hang
+#Date:  2022年 04月 27日 星期三 19:16:38 CST
+#Description:  Filter out the duplex elements
+##################################################
+echo "Which file?"
+
+read file
+awk '{a[$2]+=1}END{for(x in a){if(a[x]>1) print a[x],x}}' $file
+

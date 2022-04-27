@@ -1,0 +1,9 @@
+#!/bin/bash
+##################################################
+#Author:  Qian Hang
+#Date:  2022年 04月 27日 星期三 19:25:48 CST
+#Description:  Text Transposition
+##################################################
+echo "Which file?"
+read file 
+awk '{for(i=1;i<=NF;i++) a[i]=a[i]$i" "}END{for(x in a) print a[x]}' $file 

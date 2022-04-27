@@ -1,0 +1,14 @@
+#!/bin/bash
+##################################################
+#Author:  Qian Hang
+#Date:  2022年 04月 27日 星期三 16:57:09 CST
+#Description:  Count the words that have less that 8 alphabets
+##################################################
+echo "Which file to count?"
+read file 
+if [ -f $file ]
+then 
+awk -F" " '{for(i=1;i<=NF;i++){if(length($i) < 8){print $i}}}' $file
+else 
+echo "This file doesn't exist in this directory"
+fi

@@ -1,0 +1,10 @@
+#!/bin/bash
+##################################################
+#Author:  Qian Hang
+#Date:  2022年 04月 27日 星期三 17:35:14 CST
+#Description:  Print the frecuency of the file
+##################################################
+
+echo "Which file?"
+read file 
+awk '{for(i=1;i<=NF;i++) a[$i]+=1}END{for(x in a) print x,a[x]}' $file

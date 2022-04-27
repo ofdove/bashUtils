@@ -1,0 +1,13 @@
+#!/bin/bash
+##################################################
+#Author:  Qian Hang
+#Date:  2022年 04月 27日 星期三 15:41:32 CST
+#Description:  Print the multiples of 7
+##################################################
+
+for i in {0..500}
+  do
+    if [[ i%7 -eq 0 ]];then
+      echo $i
+    fi
+  done
