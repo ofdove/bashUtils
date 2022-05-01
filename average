@@ -1,0 +1,9 @@
+#!/bin/bash
+##################################################
+#Author:  Qian Hang
+#Date:  2022年 05月 01日 星期日 15:04:17 CST
+#Description:  Evaluate the mean of an array
+##################################################
+echo "Which file?"
+read file 
+awk '{if(NR==1) {N=$1} else{sum+=$1}} END{printf ("%.3f",sum/N) }' $file

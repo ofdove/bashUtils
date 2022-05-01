@@ -1,0 +1,16 @@
+#!/bin/bash
+##################################################
+#Author:  Qian Hang
+#Date:  2022年 05月 01日 星期日 17:27:19 CST
+#Description:  Print a isosceles triangle
+##################################################
+
+awk 'BEGIN{
+  for (i=1;i<6;i++){
+    for(j=5;j>i;j--)
+      printf " "
+    for(k=0;k<i;k++)
+      printf "* "
+    print ""
+  }
+}'

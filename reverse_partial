@@ -1,0 +1,14 @@
+#!/bin/bash
+##################################################
+#Author:  Qian Hang
+#Date:  2022年 05月 01日 星期日 16:17:27 CST
+#Description:  Reverse the line
+##################################################
+echo "Which file?"
+read file
+
+awk -F ":" '{
+  a[NR]=$NF;
+  for (i=NF-1;i>0;i--)
+  a[NR]=a[NR]":"$i
+}END{for(k in a) print a[k]}' $file

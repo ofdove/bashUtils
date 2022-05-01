@@ -1,0 +1,14 @@
+#!/bin/bash
+##################################################
+#Author:  Qian Hang
+#Date:  2022年 05月 01日 星期日 20:29:28 CST
+#Description:  Make a dictionary
+##################################################
+echo "Which file"
+read file 
+awk -F ":" '{
+  a[$1] = a[$1] $2 "\n"
+}
+END {for (i in a){
+  printf("[%s]\n%s",i,a[i])
+}}' $file

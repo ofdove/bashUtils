@@ -1,0 +1,18 @@
+#!/bin/bash
+##################################################
+#Author:  Qian Hang
+#Date:  2022年 05月 01日 星期日 20:05:16 CST
+#Description:  Formalize the digits
+##################################################
+echo "Which file?"
+read file
+awk -F "" '{
+  number = "";
+  for(i=1;i<=NF;i++){
+    j=NF+1-i
+    number=$j number
+    if(i%3==0 && i !=NF) number = "," number
+  }
+  print number
+}' $file
+  

@@ -1,0 +1,9 @@
+#!/bin/bash
+##################################################
+#Author:  Qian Hang
+#Date:  2022年 05月 01日 星期日 16:48:42 CST
+#Description:  Filter out the URLs
+##################################################
+echo "Which file"
+read file
+awk -F "/" '{print $3}' $file | sort | uniq -c | sort -r | awk '{print $1" "$2}' 

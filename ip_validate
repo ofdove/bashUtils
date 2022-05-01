@@ -1,0 +1,27 @@
+#!/bin/bash
+##################################################
+#Author:  Qian Hang
+#Date:  2022年 05月 01日 星期日 15:54:25 CST
+#Description:  To check if it actually an ip address
+##################################################
+
+echo "Type in the ip address:"
+read ip
+awk -F. '{if(NF!=4){
+print "error";next
+}else{
+  for(i=1;i<=4;i++){
+    if(i==4){
+      if($i>=0&&i<=255){
+        print "yes";next
+      }else{
+        print "no";next
+      }
+    }else{
+      if($i<0||$i>255){
+        print "no";next
+      }
+    }
+  }
+}
+}' $ip
