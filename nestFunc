@@ -1,0 +1,19 @@
+#!/bin/bash
+##################################################
+#Author:  Qian Hang
+#Date:  2022年 05月 23日 星期一 10:52:12 CST
+#Description:  Test the nest functions.
+##################################################
+
+# Call one function to another
+number_one () {
+  echo "This is the first function speaking..."
+  number_two
+}
+
+number_two () {
+  echo "This is now the second function speaking..."
+}
+
+# Call the function one
+number_one
