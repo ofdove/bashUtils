@@ -1,0 +1,5 @@
+#+title: 实验六报告 钱航 3190611023
+* 磁盘阵列技术
+* RAID5部署
+[[/home/ofdove/Pictures/RAID5.png]]
+* seafile文件存储
