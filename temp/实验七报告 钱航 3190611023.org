@@ -86,3 +86,36 @@ docker run -d -p 81:80 \\n-v /root/data/html:/var/www/html \\n-v /root/data/phpi
    [[/home/ofdove/Pictures/php.png]]
    [[/home/ofdove/Pictures/mysql.png]]
 7. 正式开始搭建网站
+    - session缓存容器
+      #+begin_src shell
+docker run -d --restart=always --name session memcached
+      #+end_src
+
+   - mariadb数据库容器
+     #+begin_src shell
+docker run --name db --restart=always \\n-v /root/data/mysql:/var/lib/mysql -e MYSQL_ROOT_PASSWORD=123456 -d mariadb:5.5.64
+     #+end_src
+
+   - 启动web服务容器
+     #+begin_src shell
+docker run -d --link db:db --link session:session \\n-v /root/data/html:/var/www/html \\n-v /root/data/phpini:/usr/local/etc/php --restart=always --name web2 myphp
+     #+end_src
+     #+begin_src shell
+docker run -d --link db:db --link session:session \\n-v /root/data/html:/var/www/html \\n-v /root/data/phpini:/usr/local/etc/php --restart=always --name web1 myphp
+     #+end_src
+
+   - 启动nginx容器
+     #+begin_src shell
+docker run -d --restart=always --name lb -p 80:80 -v /root/data/nginx:/etc nginx/conf.d --link web1:web1 --link web2:web2 nginx
+     #+end_src
+
+   - 创建数据库
+     [[/home/ofdove/Pictures/maraidb.png]]
+
+   - 将typecho文件复制入 */root/data/html/* 下，更改html文件夹读写权限
+     #+begin_src shell
+chmod 777 /root/data/html
+     #+end_src
+
+   - 然后设置管理员帐号密码等，安装完成
+     [[/home/ofdove/Pictures/hello_world.png]]
